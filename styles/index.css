@@ -1,0 +1,105 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #373737;
+    justify-content: center;
+}
+
+/* Canvas */
+#chartCanvas {
+    width: 99%;
+    height: 75vh;
+    border: 3px solid white;
+    background-color: #1f1f1f;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Options */
+ul {
+    margin: 5px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    border-radius: 10%;
+    border: 3px solid white;
+    margin: 5px;
+}
+
+li:hover {
+    background-color: #1f1f1f;
+    transition: .5s;
+}
+
+/* Stats */
+table {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, tr, td {
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border-collapse: collapse;
+}
+
+td {
+    width: 100px;
+}
+
+#head {
+    background-color: #1f1f1f;
+}
+
+svg {
+    color: white;
+}
+
+/* Footer */
+footer {    
+    position: absolute;
+    bottom: 0;  
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: #1f1f1f;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+
+a {
+    color: orange;
+}
+
+a:link {
+    text-decoration: None;
+}
+
+a:hover {
+    transition-duration: .5s;
+    text-shadow: 0 0 3px orange;
+}
+
