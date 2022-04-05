@@ -84,6 +84,25 @@ function redraw() {
         ctx.fill();
         ctx.stroke();
     }
+
+    // Number of connected edges
+    if (showECount) {
+        ctx.fillStyle = "#FFFFFF";
+        for (let i = 0; i < points.length; i++) {
+            // Getting the count of connected edges
+            let eCount = 0;
+            for (let j = 0; j < edges.length; j++) {
+                if (JSON.stringify({x: edges[j].x1, y:edges[j].y1}) == JSON.stringify(points[i]) || JSON.stringify({x: edges[j].x2, y:edges[j].y2}) == JSON.stringify(points[i])) {
+                    eCount++;
+                }
+            }
+
+            // Writing the count
+            ctx.font = `${canvas.height / 50 * 1.75}px Arial`;
+            ctx.fillText(eCount, points[i].x, points[i].y + canvas.height / 50 * 3);
+        }
+        ctx.fillStyle = selColor;
+    }
 }
 
 
@@ -112,7 +131,7 @@ function resizeCanvas() {
     canvas.height = window.innerHeight * 0.75;
 
     // If help is still active
-    if (buttons[4].style.backgroundColor == bcolors[buttons[4].id]) {
+    if (buttons[5].style.backgroundColor != "") {
         drawHelp();
         return;
     }

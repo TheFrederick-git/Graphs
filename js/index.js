@@ -8,6 +8,7 @@ var ctx;
 var newEdge;
 var oldPoint;
 var helpImage;
+var showECount;
 
 function main() {
     // Init. procedure
@@ -19,15 +20,16 @@ function main() {
     ctx = canvas.getContext('2d');
     newEdge = {};
     oldPoint = {};
+    showECount = false;
     helpImage = new Image();
     helpImage.src = "./images/help.png";
 
     
     // Events
-    resizeCanvas();
     helpImage.onload = function () {
         drawHelp();
     }
+    resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
     canvas.addEventListener("click", logic);
 }

@@ -5,6 +5,7 @@ const bcolors = {
     "adde": "#68BC00",  // Add edge button color
     "delp": "#D33115",  // Delete point button color
     "movp": "#AB149E",  // Move point button color
+    "ecnt": "#FCDC00",  // Number of connected edges color
     "help": "#16A5A5"   // Help button color
 }
 
@@ -16,13 +17,31 @@ function bclick(button) {
     oldPoint = {};
     redraw();
 
+    
     // Turn off all buttons
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = "";
     }
 
+    // Toggled number of counts
+    if (button.id == "ecnt") {
+        if (showECount) {
+            showECount = false;
+        } else {
+            showECount = true;
+        }
+        redraw();
+    }
+
+    // Show edges count
+    if (showECount) {
+        buttons[4].style.backgroundColor = bcolors[buttons[4].id];
+    } 
+    
     // Turn on selected button
     button.style.backgroundColor = bcolors[button.id];
+
+
 
     // Show Help
     if (button.id == "help") {
@@ -35,12 +54,14 @@ function bclick(button) {
 function logic(e) {
     // Core logic
 
-
     let option = "";
 
     // Getting option
     for (let i = 0; i < buttons.length; i++) {
         if (buttons[i].style.backgroundColor != "") {
+            if (buttons[i].id == "ecnt") {
+                continue;
+            }
             option = buttons[i].id;
         }
     }

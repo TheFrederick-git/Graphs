@@ -76,10 +76,10 @@ svg {
 
 /* Footer */
 footer {    
-    position: absolute;
-    bottom: 0;  
+    position: relative;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 1.5rem;
+    height: 50px;
     width: 100%;
     background-color: #1f1f1f;
 }
@@ -87,7 +87,8 @@ footer {
 p {
     font-family: 'Poppins', sans-serif;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    padding-top: 10px;
 }
 
 a {
