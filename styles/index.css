@@ -22,6 +22,15 @@ body {
     transform: translateX(-50%);
 }
 
+/* Adds */
+img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 5px;
+    width: 45%;
+    height: auto;
+}
 
 /* Options */
 ul {
@@ -88,7 +97,7 @@ p {
     font-family: 'Poppins', sans-serif;
     color: white;
     font-size: 1.3rem;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 a {
