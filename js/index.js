@@ -9,6 +9,8 @@ var newEdge;
 var oldPoint;
 var helpImage;
 var showECount;
+var showAdds;
+var addImg;
 
 function main() {
     // Init. procedure
@@ -17,10 +19,12 @@ function main() {
     buttons = document.getElementById("menu").getElementsByTagName("li");
     tableData = document.getElementById("tvals").getElementsByTagName("td");
     canvas = document.getElementById("chartCanvas");
+    addImg = document.getElementById("addimgs");
     ctx = canvas.getContext('2d');
     newEdge = {};
     oldPoint = {};
     showECount = false;
+    showAdds = false;
     helpImage = new Image();
     helpImage.src = "./images/help.png";
 
