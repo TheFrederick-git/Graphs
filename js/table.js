@@ -59,3 +59,9 @@ function refreshData() {
         }
     }
 }
+
+function secret() {
+    // It's a secret
+    alert("Now it's your turn\na92a4c6f38e691ce8c670f339a801381\n-TF");
+}
+
