@@ -6,7 +6,7 @@ function getClickedCircles(e, clicked) {
     const rect = canvas.getBoundingClientRect();
     return points.filter(p => {
         const x = e.clientX - rect.left - p.x;
-        const y = e.clientY - rect.top- p.y;
+        const y = e.clientY - rect.top - p.y;
 
         // Length of a vector :)
         if (clicked) {
