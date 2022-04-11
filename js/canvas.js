@@ -150,5 +150,17 @@ function resizeCanvas() {
         edges[i].y2 = edges[i].y2 * canvas.height / oldY;
     }
 
+    // Selected point to create edge rescale
+    if (Object.keys(newEdge).length == 2) {
+        newEdge.x1 = newEdge.x1 * canvas.width / oldX;
+        newEdge.y1 = newEdge.y1 * canvas.height / oldY;
+    }
+
+    // Selected point to move rescale
+    if (Object.keys(oldPoint).length == 2) {
+        oldPoint.x = oldPoint.x * canvas.width / oldX;
+        oldPoint.y = oldPoint.y * canvas.height / oldY;
+    }
+    
     redraw();
 }
