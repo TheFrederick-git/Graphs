@@ -1,6 +1,6 @@
 // Show adds
 
-const addsNum = 3;   // Number of adds
+const addsNum = 5;   // Number of adds
 const addDelay = 10; // Add delay [seconds]
 
 function doAdds() {
