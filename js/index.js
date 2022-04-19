@@ -24,7 +24,7 @@ function main() {
     newEdge = {};
     oldPoint = {};
     showECount = false;
-    showAdds = true;
+    showAdds = false;
     helpImage = new Image();
     helpImage.src = "./images/help.png";
 
